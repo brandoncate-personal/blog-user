@@ -1,4 +1,6 @@
-// import "../mocks";
+if (process.env.NODE_ENV === "development") {
+  require("mocks");
+}
 
 import "../styles/globals.css";
 import "prismjs/themes/prism-tomorrow.css";

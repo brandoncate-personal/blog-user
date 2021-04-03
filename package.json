@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "mock-server-init": "npx msw init ./public",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

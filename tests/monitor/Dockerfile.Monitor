@@ -1,0 +1,11 @@
+FROM docker.io/brandoncate95/monitor-cli:0.0.2 AS executable
+
+FROM golang:1.15-alpine
+
+RUN apk add --no-cache git
+
+COPY . .
+
+COPY --from=executable /app/monitor /monitor
+
+ENTRYPOINT ["/monitor"]
